@@ -1,0 +1,23 @@
+{
+  "name": "snyk-enrich-license",
+  "description": "add the license text template to the output of `snyk test --json`",
+  "main": "snyk-enrich-license.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "author": "Snyk LTD",
+  "license": "APACHE-2.0",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "snyk": "^1.30.1"
+  },
+  "devDependencies": {},
+  "bin": {
+    "snyk-enrich-license": "./snyk-enrich-license.js"
+  },
+  "snyk": true
+}
