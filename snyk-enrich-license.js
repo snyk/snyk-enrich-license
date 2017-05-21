@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var argv = require('minimist')(process.argv.slice(2));
+var chalk = require('chalk');
 var addFulltextToLicenses = require('./add-full-text-to-licenses');
 var output;
 var source;
@@ -18,7 +19,17 @@ if (argv.i) { //input source
 }
 
 data = fs.readFileSync(source, 'utf8');
-data = JSON.parse(data);
+try {
+  data = JSON.parse(data);
+} catch (_) {
+  console.log(chalk.red('invalid input JSON'));
+  process.exit(1);
+}
+
+if (!data.hasOwnProperty(vulnerabilities)) {
+  console.log(chalk.red('invalid input data - no vulnerabilities key in JSON'));
+  process.exit(1);
+}
 var issues = data.vulnerabilities;
 
 addFulltextToLicenses(issues)
