@@ -3,9 +3,10 @@
   "description": "add the license text template to the output of `snyk test --json`",
   "main": "snyk-enrich-license.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tap test -R=spec",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Snyk LTD",
   "license": "APACHE-2.0",
@@ -15,9 +16,18 @@
     "request-promise": "^4.2.1",
     "snyk": "^1.30.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "semantic-release": "^6.3.6",
+    "tap": "^10.3.2",
+    "tap-only": "0.0.5"
+  },
   "bin": {
     "snyk-enrich-license": "./snyk-enrich-license.js"
   },
-  "snyk": true
+  "snyk": true,
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snyk/snyk-enrich-license.git"
+  }
 }
