@@ -1,0 +1,405 @@
+{
+  "ok": false,
+  "vulnerabilities": [
+    {
+      "title": "Unknown license",
+      "moduleName": "node-uuid",
+      "language": "js",
+      "packageManager": "npm",
+      "severity": "medium",
+      "type": "license",
+      "publicationTime": "2017-03-13T15:31:53.105Z",
+      "creationTime": "2017-03-13T15:31:53.105Z",
+      "id": "SNYK-LIC-5253937",
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "license": "Unknown",
+      "licenseTemplateUrl": null,
+      "from": [
+        "shallow-goof@0.0.1",
+        "node-uuid@1.4.0"
+      ],
+      "upgradePath": [],
+      "version": "1.4.0",
+      "name": "node-uuid",
+      "isUpgradable": false,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/node-uuid/package.json",
+      "parentDepType": "prod"
+    },
+    {
+      "title": "BSD-3-Clause license",
+      "moduleName": "qs",
+      "language": "js",
+      "packageManager": "npm",
+      "severity": "medium",
+      "type": "license",
+      "publicationTime": "2017-03-13T15:31:59.565Z",
+      "creationTime": "2017-03-13T15:31:59.565Z",
+      "id": "SNYK-LIC-5292139",
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "license": "(BSD-3-Clause OR MIT)",
+      "licenseTemplateUrl": [
+        "https://raw.githubusercontent.com/spdx/license-list/master/BSD-3-Clause.txt",
+        "https://raw.githubusercontent.com/spdx/license-list/master/MIT.txt"
+      ],
+      "from": [
+        "shallow-goof@0.0.1",
+        "qs@0.0.6"
+      ],
+      "upgradePath": [],
+      "version": "0.0.6",
+      "name": "qs",
+      "isUpgradable": false,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/node-uuid/package.json",
+      "parentDepType": "prod",
+      "licenseText": [
+        "Copyright (c) <<var;name=copyright;original= <year> <owner>;match=.+>>. All rights reserved. \r\n\r\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\r\n\r\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. \r\n\r\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. \r\n\r\n3. Neither the name of <<var;name=organizationClause3;original=the copyright holder;match=.+>> nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\r\n\r\nTHIS SOFTWARE IS PROVIDED BY <<var;name=copyrightHolderAsIs;original=THE COPYRIGHT HOLDERS AND CONTRIBUTORS;match=.+>> \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <<var;name=copyrightHolderLiability;original=THE COPYRIGHT HOLDER OR CONTRIBUTORS;match=.+>> BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. ",
+        "MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      ]
+    },
+    {
+      "title": "Insecure Randomness",
+      "credit": [
+        "Fedot Praslov"
+      ],
+      "creationTime": "2016-03-28T22:00:02.566Z",
+      "modificationTime": "2016-03-28T22:00:02.566Z",
+      "publicationTime": "2016-03-28T22:00:02.566Z",
+      "description": "## Overview\nA bug in `node-uuid` prior to 1.4.4 caused it to use the cryptographically insecure `Math.random` which can produce predictable values and should not be used in security-sensitive context.\n\n## Remediation\nUpgrade to version 1.4.4 or greater.\n\n## References\n- https://github.com/broofa/node-uuid/issues/108\n- https://github.com/broofa/node-uuid/issues/122\n\n",
+      "semver": {
+        "vulnerable": "<1.4.4",
+        "unaffected": ">=1.4.4"
+      },
+      "CVSSv3": "CVSS:3.0/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "severity": "medium",
+      "identifiers": {
+        "CWE": [
+          "CWE-330"
+        ],
+        "CVE": [],
+        "NSP": 93,
+        "ALTERNATIVE": [
+          "SNYK-JS-NODEUUID-10089"
+        ]
+      },
+      "patches": [
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/node-uuid/20160328/node-uuid_20160328.patch"
+          ],
+          "version": "<=1.4.3 >=1.4.2",
+          "modificationTime": "2016-07-19T13:00:00.396Z",
+          "comments": [],
+          "id": "patch:npm:node-uuid:20160328:0"
+        }
+      ],
+      "moduleName": "node-uuid",
+      "disclosureTime": "2016-03-28T21:29:30.000Z",
+      "language": "js",
+      "packageManager": "npm",
+      "id": "npm:node-uuid:20160328",
+      "packageName": "node-uuid",
+      "alternativeIds": [
+        "SNYK-JS-NODEUUID-10089"
+      ],
+      "from": [
+        "shallow-goof@0.0.1",
+        "node-uuid@1.4.0"
+      ],
+      "upgradePath": [
+        false,
+        "node-uuid@1.4.6"
+      ],
+      "version": "1.4.0",
+      "name": "node-uuid",
+      "isUpgradable": true,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/node-uuid/package.json",
+      "parentDepType": "prod"
+    },
+    {
+      "title": "Denial of Service (Memory Exhaustion)",
+      "credit": [
+        "Dustin Shiver"
+      ],
+      "description": "## Overview\nDuring parsing, the qs module may create a sparse area (an array where not elements are filled), and grow that array to the necessary size based on the indices used on it. An attacker can specify a high index value in a query string, thus making the server allocate a respectively big array. Truly large values can cause the server to run out of memory and cause it to crash - thus enabling a Denial-of-Service attack.\n\n## Remediation\nUpgrade qs to version 1.0.0 or greater. In these versions, qs introduced a low limit on the index value, preventing such an attack\n\n## References\n\n- https://github.com/visionmedia/node-querystring/issues/104\n\n",
+      "semver": {
+        "vulnerable": "<1.0.0",
+        "unaffected": ">= 1.x"
+      },
+      "CVSSv2": "CVSS:2.0/AV:N/AC:L/Au:N/C:N/I:N/A:P",
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "severity": "high",
+      "identifiers": {
+        "CWE": [
+          "CWE-400"
+        ],
+        "CVE": [
+          "CVE-2014-7191"
+        ],
+        "NSP": 29,
+        "ALTERNATIVE": [
+          "SNYK-JS-QS-10019"
+        ]
+      },
+      "patches": [
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20140806/qs_20140806_snyk.patch"
+          ],
+          "version": "<1.0.0 >=0.6.5",
+          "modificationTime": "2014-08-06T06:10:22.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20140806:0"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20140806/qs_20140806_0_1_snyk_npm.patch"
+          ],
+          "version": "=0.5.6",
+          "modificationTime": "2014-08-06T06:10:22.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20140806:1"
+        }
+      ],
+      "moduleName": "qs",
+      "creationTime": "2014-08-06T06:10:22.000Z",
+      "publicationTime": "2014-08-06T06:10:22.000Z",
+      "modificationTime": "2015-11-06T02:09:36.180Z",
+      "disclosureTime": "2014-08-06T06:10:22.000Z",
+      "language": "js",
+      "packageManager": "npm",
+      "id": "npm:qs:20140806",
+      "packageName": "qs",
+      "alternativeIds": [
+        "SNYK-JS-QS-10019"
+      ],
+      "from": [
+        "shallow-goof@0.0.1",
+        "qs@0.0.6"
+      ],
+      "upgradePath": [
+        false,
+        "qs@1.0.0"
+      ],
+      "version": "0.0.6",
+      "name": "qs",
+      "isUpgradable": true,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/qs/package.json",
+      "parentDepType": "prod"
+    },
+    {
+      "title": "Denial of Service (Event Loop Blocking)",
+      "credit": [
+        "Tom Steele"
+      ],
+      "description": "## Overview\nWhen parsing a string representing a deeply nested object, qs will block the event loop for long periods of time. Such a delay may hold up the server's resources, keeping it from processing other requests in the meantime, thus enabling a Denial-of-Service attack. \n\n## Remediation\nUpdate qs to version 1.0.0 or higher. In these versions, qs enforces a max object depth (along with other limits), limiting the event loop length and thus preventing such an attack.\n\n## References\nhttps://nodesecurity.io/advisories/28\n",
+      "semver": {
+        "vulnerable": "<1.0.0",
+        "unaffected": ">= 1.x"
+      },
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+      "severity": "medium",
+      "identifiers": {
+        "CWE": [
+          "CWE-400"
+        ],
+        "CVE": [],
+        "NSP": 28,
+        "ALTERNATIVE": [
+          "SNYK-JS-QS-10020"
+        ]
+      },
+      "patches": [
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20140806-1/qs_20140806-snyk.patch"
+          ],
+          "version": "<1.0.0 >=0.6.5",
+          "modificationTime": "2014-11-20T06:10:22.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20140806-1:0"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20140806-1/qs_20140806-1_0_1_snyk.patch"
+          ],
+          "version": "=0.5.6",
+          "modificationTime": "2014-11-20T06:10:22.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20140806-1:1"
+        }
+      ],
+      "moduleName": "qs",
+      "creationTime": "2014-08-06T06:10:23.000Z",
+      "publicationTime": "2014-08-06T06:10:23.000Z",
+      "modificationTime": "2015-11-06T02:09:36.180Z",
+      "disclosureTime": "2014-08-06T06:10:23.000Z",
+      "language": "js",
+      "packageManager": "npm",
+      "id": "npm:qs:20140806-1",
+      "packageName": "qs",
+      "alternativeIds": [
+        "SNYK-JS-QS-10020"
+      ],
+      "from": [
+        "shallow-goof@0.0.1",
+        "qs@0.0.6"
+      ],
+      "upgradePath": [
+        false,
+        "qs@1.0.0"
+      ],
+      "version": "0.0.6",
+      "name": "qs",
+      "isUpgradable": true,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/qs/package.json",
+      "parentDepType": "prod"
+    },
+    {
+      "title": "Prototype Override Protection Bypass",
+      "credit": [
+        "Snyk Security Research Team"
+      ],
+      "moduleName": "qs",
+      "packageName": "qs",
+      "language": "js",
+      "packageManager": "npm",
+      "description": "## Overview\n[`qs`](https://www.npmjs.com/package/qs) is a querystring parser that supports nesting and arrays, with a depth limit.\n\nBy default `qs` protects against attacks that attempt to overwrite an object's existing prototype properties, such as `toString()`, `hasOwnProperty()`,etc.\n\nFrom [`qs` documentation](https://github.com/ljharb/qs):\n> By default parameters that would overwrite properties on the object prototype are ignored, if you wish to keep the data from those fields either use plainObjects as mentioned above, or set allowPrototypes to true which will allow user input to overwrite those properties. WARNING It is generally a bad idea to enable this option as it can cause problems when attempting to use the properties that have been overwritten. Always be careful with this option.\n\nOverwriting these properties can impact application logic, potentially allowing attackers to work around security controls, modify data, make the application unstable and more.\n\nIn versions of the package affected by this vulnerability, it is possible to circumvent this protection and overwrite prototype properties and functions by prefixing the name of the parameter with `[` or `]`. e.g. `qs.parse(\"]=toString\")` will return `{toString = true}`, as a result, calling `toString()` on the object will throw an exception.\n\n**Example:**\n```js\nqs.parse('toString=foo', { allowPrototypes: false })\n// {}\n\nqs.parse(\"]=toString\", { allowPrototypes: false })\n// {toString = true} <== prototype overwritten\n```\n\nFor more information, you can check out our [blog](https://snyk.io/blog/high-severity-vulnerability-qs/).\n\n## Disclosure Timeline\n- February 13th, 2017 - Reported the issue to package owner.\n- February 13th, 2017 - Issue acknowledged by package owner.\n- February 16th, 2017 - Partial fix released in versions `6.0.3`, `6.1.1`, `6.2.2`, `6.3.1`.\n- March 6th, 2017     - Final fix released in versions `6.4.0`,`6.3.2`, `6.2.3`, `6.1.2` and `6.0.4`\n\n## Remediation\nUpgrade `qs` to version `6.4.0` or higher.\n**Note:** The fix was backported to the following versions `6.3.2`, `6.2.3`, `6.1.2`, `6.0.4`.\n\n## References\n- [Github Commit](https://github.com/ljharb/qs/commit/beade029171b8cef9cee0d03ebe577e2dd84976d)\n- [Report of an insufficient fix](https://github.com/ljharb/qs/issues/200)\n",
+      "identifiers": {
+        "CWE": [
+          "CWE-20"
+        ],
+        "CVE": [],
+        "ALTERNATIVE": [
+          "SNYK-JS-QS-10407"
+        ]
+      },
+      "semver": {
+        "vulnerable": "<6.3.2 >=6.3.0 || <6.2.3 >=6.2.0 || <6.1.2 >=6.1.0 || <6.0.4",
+        "unaffected": ">=6.4.0 || ~6.3.2 || ~6.2.3 || ~6.1.2 || ~6.0.4"
+      },
+      "patches": [
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/630_632.patch"
+          ],
+          "version": "=6.3.0",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:0"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/631_632.patch"
+          ],
+          "version": "=6.3.1",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:1"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/621_623.patch"
+          ],
+          "version": "=6.2.1",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:2"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/622_623.patch"
+          ],
+          "version": "=6.2.2",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:3"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/610_612.patch"
+          ],
+          "version": "=6.1.0",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:4"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/611_612.patch"
+          ],
+          "version": "=6.1.1",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:5"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/602_604.patch"
+          ],
+          "version": "=6.0.2",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:6"
+        },
+        {
+          "urls": [
+            "https://s3.amazonaws.com/path/to/patches/npm/qs/20170213/my.patch"
+          ],
+          "version": "=6.0.3",
+          "modificationTime": "2017-03-09T00:00:00.000Z",
+          "comments": [],
+          "id": "patch:npm:qs:20170213:7"
+        }
+      ],
+      "severity": "high",
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "disclosureTime": "2017-02-13T00:00:00.000Z",
+      "publicationTime": "2017-03-01T10:00:54.163Z",
+      "modificationTime": "2017-03-06T21:00:00.000Z",
+      "creationTime": "2017-02-14T11:44:54.163Z",
+      "id": "npm:qs:20170213",
+      "alternativeIds": [
+        "SNYK-JS-QS-10407"
+      ],
+      "from": [
+        "shallow-goof@0.0.1",
+        "qs@0.0.6"
+      ],
+      "upgradePath": [
+        false,
+        "qs@6.0.4"
+      ],
+      "version": "0.0.6",
+      "name": "qs",
+      "isUpgradable": true,
+      "isPatchable": false,
+      "__filename": "/path/to/node_modules/qs/package.json",
+      "parentDepType": "prod"
+    }
+  ],
+  "dependencyCount": 2,
+  "org": "lics",
+  "licensesPolicy": {
+    "whitelist": []
+  },
+  "summary": "6 vulnerable dependency paths",
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 6,
+  "packageManager": "npm"
+}
