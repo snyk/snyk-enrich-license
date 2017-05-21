@@ -24,7 +24,10 @@ The Snyk License Enrich Utility takes the json outputted from `snyk test --json`
 
 
 
-   `snyk-enrich-license -i results.json > results.json`
+   `snyk-enrich-license -i report.json > results.json` which is equivalent to
+
+   `snyk-enrich-license -i report.json -o results.json`
+
 
 3. Open your new file (`results.json` above), and rejoice.
 
