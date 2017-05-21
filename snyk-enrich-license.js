@@ -26,7 +26,7 @@ try {
   process.exit(1);
 }
 
-if (!data.hasOwnProperty(vulnerabilities)) {
+if (!data.hasOwnProperty('vulnerabilities')) {
   console.log(chalk.red('invalid input data - no vulnerabilities key in JSON'));
   process.exit(1);
 }
