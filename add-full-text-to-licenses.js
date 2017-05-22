@@ -1,6 +1,8 @@
 var request = require('request-promise');
+var chalk = require('chalk');
 
-var cache = {};
+var cache = {Unknown: 'Unknown'};
+
 
 function downloadLicense(licenseUrl) {
   if (cache.hasOwnProperty(licenseUrl)) {
@@ -10,7 +12,7 @@ function downloadLicense(licenseUrl) {
     .then(function (licenseText) {
       cache[licenseUrl] = licenseText;
     }).catch(function (err) {
-      console.log('error downloading', licenseUrl, err);
+      console.log(chalk.grey('error downloading', licenseUrl));
       cache[licenseUrl] = 'Download Error';
     });
 }
