@@ -41,9 +41,9 @@ addFulltextToLicenses(issues)
     if (output) {
       fs.writeFile(output, out, function(err) {
         if (err) {
-          console.log('error writing report to ' + output, err);
+          console.log(chalk.red('error writing report to ' + output, err));
         } else {
-          console.log('Vulnerability snapshot saved at ' + output);
+          console.log(chalk.green('Enhanced test report saved at ' + output));
         }
       });
     } else {
