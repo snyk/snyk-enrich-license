@@ -4,8 +4,6 @@
   "main": "snyk-enrich-license.js",
   "scripts": {
     "test": "tap test -R=spec",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect",
     "semantic-release": "semantic-release"
   },
   "author": "Snyk LTD",
@@ -14,8 +12,7 @@
     "chalk": "^2.4.2",
     "minimist": "^1.2.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "snyk": "^1.239.2"
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "semantic-release": "^15.13.24",
