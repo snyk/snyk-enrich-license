@@ -3,8 +3,7 @@
   "description": "add the license text template to the output of `snyk test --json`",
   "main": "snyk-enrich-license.js",
   "scripts": {
-    "test": "tap test -R=spec",
-    "semantic-release": "semantic-release"
+    "test": "tap test -R=spec"
   },
   "author": "Snyk LTD",
   "license": "APACHE-2.0",
@@ -15,7 +14,6 @@
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.24",
     "tap": "^14.6.9",
     "tap-only": "0.0.5"
   },
