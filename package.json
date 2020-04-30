@@ -3,7 +3,9 @@
   "description": "add the license text template to the output of `snyk test --json`",
   "main": "snyk-enrich-license.js",
   "scripts": {
-    "test": "tap test -R=spec"
+    "test": "tap test -R=spec",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Snyk LTD",
   "license": "APACHE-2.0",
@@ -11,7 +13,8 @@
     "chalk": "^2.4.2",
     "minimist": "^1.2.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "tap": "^14.6.9",
